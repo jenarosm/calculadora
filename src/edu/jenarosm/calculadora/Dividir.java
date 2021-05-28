@@ -1,14 +1,9 @@
 package edu.jenarosm.calculadora;
 
-import edu.jenarosm.calculadora.Suma;
-import edu.jenarosm.calculadora.Multiplicar;
-
-
 public class Dividir {
 	
-	public int divide(int x, int y) { // Divide x entre y
-		Suma s = new Suma();
-		Multiplicar mult = new Multiplicar();
+	public static int divide(int x, int y) { // Divide x entre y
+
 		int total = 0;
 		boolean isNeg = false;		//Almacena si el resultado será positivo o negativo
 		
@@ -30,11 +25,11 @@ public class Dividir {
 		int resto = x;
 		
 		while(resto>=y) {			//bucle principal
-			resto=s.suma(resto,-y);
+			resto=Suma.suma(resto,-y);
 			total++;
 		}
 		
-		if(mult.multiplica(resto, 10)>mult.multiplica(y,5)) {	//Redondeo hacia arriba
+		if(Multiplicar.multiplica(resto, 10)>Multiplicar.multiplica(y,5)) {	//Redondeo hacia arriba
 			total++;
 		}
 		

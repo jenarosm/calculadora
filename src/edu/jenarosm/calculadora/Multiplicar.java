@@ -1,12 +1,9 @@
 package edu.jenarosm.calculadora;
 
-import edu.jenarosm.calculadora.Suma;
-
-
 public class Multiplicar {
 	
-	public int multiplica(int x, int y) {
-		Suma s = new Suma();
+	public static int multiplica(int x, int y) {
+
 		int total = 0;
 		boolean isNeg = false;		//Almacena si el resultado será positivo o negativo
 		
@@ -26,7 +23,7 @@ public class Multiplicar {
 		}
 		
 		for (int i=0;i<x;i++) {		//Bucle que suma x veces el factor y
-			total=s.suma(total, y);
+			total=Suma.suma(total, y);
 		}
 		
 		if (!isNeg) {

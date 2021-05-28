@@ -1,10 +1,9 @@
 package edu.jenarosm.calculadora;
-import edu.jenarosm.calculadora.Multiplicar;
 
 public class Raiz {
 	
-	public int raiz(int x) {
-		Multiplicar mult = new Multiplicar();
+	public static int raiz(int x) {
+
 		if(x<0) {x=-x;} //en caso de ser negativo lo pasamos a positivo ya que es una raiz cuadrada
 		
 		int total = 0, aux = 0;
@@ -16,7 +15,7 @@ public class Raiz {
 		
 		while(aux<x) {		//bucle principal
 			total++;
-			aux=mult.multiplica(total,total);
+			aux=Multiplicar.multiplica(total,total);
 		}
 		
 		if(aux>x) {			
