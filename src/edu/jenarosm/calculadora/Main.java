@@ -6,4 +6,9 @@ public class Main {
 		System.out.print("Hello World!");
 	}
 	
+	public static int suma(int x, int y) {
+		Suma sum = new Suma();
+		return sum.sumar(x, y);
+		
+	}
 }
