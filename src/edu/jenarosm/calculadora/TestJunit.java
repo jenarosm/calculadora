@@ -8,6 +8,7 @@ public class TestJunit {
    Suma sum = new Suma();
    Multiplicar mult = new Multiplicar();
    Dividir div = new Dividir();
+   Raiz r = new Raiz();
    
    @Test
    public void testSuma() {	  
@@ -24,12 +25,21 @@ public class TestJunit {
       assertEquals(12,mult.multiplica(-6, -2));
    }
    
+   @Test
    public void testDivide() {	  
 	      assertEquals(2,div.divide(4, 2));
-	      assertEquals(2,div.divide(4, -2));
+	      assertEquals(-2,div.divide(4, -2));
 	      assertEquals(1,div.divide(3, 2));
 	      assertEquals(-2,div.divide(-5, 3));
    }
+   
+   @Test
+   public void testRaiz() {	  
+	      assertEquals(2,r.raiz(4));
+	      assertEquals(2,r.raiz(-2));
+	      assertEquals(3,r.raiz(10));
+	      assertEquals(3,r.raiz(9));
+}
 	      
    
 }
