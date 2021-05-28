@@ -24,9 +24,10 @@ public class TestJunit {
       assertEquals(12,mult.multiplica(-6, -2));
    }
    
+   @Test
    public void testDivide() {	  
 	      assertEquals(2,div.divide(4, 2));
-	      assertEquals(2,div.divide(4, -2));
+	      assertEquals(-2,div.divide(4, -2));
 	      assertEquals(1,div.divide(3, 2));
 	      assertEquals(-2,div.divide(-5, 3));
    }

@@ -9,7 +9,7 @@ public class Dividir {
 	public int divide(int x, int y) { // Divide x entre y
 		Suma s = new Suma();
 		Multiplicar mult = new Multiplicar();
-		int total = 0, resto = x;
+		int total = 0;
 		boolean isNeg = false;		//Almacena si el resultado será positivo o negativo
 		
 		
@@ -26,6 +26,8 @@ public class Dividir {
 			isNeg = true;
 			y=-y;
 		}
+		
+		int resto = x;
 		
 		while(resto>=y) {
 			resto=s.suma(resto,-y);
