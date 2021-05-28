@@ -1,13 +1,15 @@
 package edu.jenarosm.calculadora;
 
 import edu.jenarosm.calculadora.Suma;
+import edu.jenarosm.calculadora.Multiplicar;
 
 
-public class Multiplicar {
+public class Dividir {
 	
-	public int multiplica(int x, int y) {
+	public int divide(int x, int y) { // Divide x entre y
 		Suma s = new Suma();
-		int total = 0;
+		Multiplicar mult = new Multiplicar();
+		int total = 0, resto = x;
 		boolean isNeg = false;		//Almacena si el resultado será positivo o negativo
 		
 		
@@ -25,8 +27,13 @@ public class Multiplicar {
 			y=-y;
 		}
 		
-		for (int i=0;i<x;i++) {		//Bucle que suma x veces el factor y
-			total=s.suma(total, y);
+		while(resto>=y) {
+			resto=s.suma(resto,-y);
+			total++;
+		}
+		
+		if(mult.multiplica(resto, 10)>mult.multiplica(y,5)) {
+			total++;
 		}
 		
 		if (!isNeg) {
@@ -35,5 +42,4 @@ public class Multiplicar {
 			return -total;
 		}
 	}
-	
 }
