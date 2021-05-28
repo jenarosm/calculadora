@@ -5,11 +5,10 @@ import static org.junit.Assert.assertEquals;
 
 public class TestJunit {
 	
-   String message = "Hello World";	
-   MessageUtil messageUtil = new MessageUtil(message);
+   Suma sum = new Suma();
 
    @Test
    public void testPrintMessage() {	  
-      assertEquals(message,messageUtil.printMessage());
+      assertEquals(4,sum.suma(2,2));
    }
 }

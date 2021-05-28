@@ -8,7 +8,7 @@ public class Main {
 	
 	public static int suma(int x, int y) {
 		Suma sum = new Suma();
-		return sum.sumar(x, y);
+		return sum.suma(x, y);
 		
 	}
 }
