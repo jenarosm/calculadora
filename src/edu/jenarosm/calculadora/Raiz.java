@@ -14,12 +14,12 @@ public class Raiz {
 		}
 		
 		
-		while(aux<x) {
+		while(aux<x) {		//bucle principal
 			total++;
 			aux=mult.multiplica(total,total);
 		}
 		
-		if(aux>x) {
+		if(aux>x) {			
 			return total -1;
 		}
 		return total;

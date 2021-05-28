@@ -29,12 +29,12 @@ public class Dividir {
 		
 		int resto = x;
 		
-		while(resto>=y) {
+		while(resto>=y) {			//bucle principal
 			resto=s.suma(resto,-y);
 			total++;
 		}
 		
-		if(mult.multiplica(resto, 10)>mult.multiplica(y,5)) {
+		if(mult.multiplica(resto, 10)>mult.multiplica(y,5)) {	//Redondeo hacia arriba
 			total++;
 		}
 		

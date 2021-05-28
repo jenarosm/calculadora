@@ -1,14 +1,17 @@
 package edu.jenarosm.calculadora;
 
+import edu.jenarosm.calculadora.*;
+
 public class Main {
 	
+	Suma sum = new Suma();
+	Multiplicar mult = new Multiplicar();
+	Dividir div = new Dividir();
+	Raiz r = new Raiz();
+   
 	public static void main (String[] args) {
 		System.out.print("Hello World!");
 	}
 	
-	public static int suma(int x, int y) {
-		Suma sum = new Suma();
-		return sum.suma(x, y);
-		
-	}
+
 }
