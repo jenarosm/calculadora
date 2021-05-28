@@ -36,9 +36,12 @@ public class TestJunit {
    @Test
    public void testRaiz() {	  
 	      assertEquals(2,r.raiz(4));
-	      assertEquals(2,r.raiz(-2));
+	      assertEquals(2,r.raiz(-4));
 	      assertEquals(3,r.raiz(10));
 	      assertEquals(3,r.raiz(9));
+	      assertEquals(7,r.raiz(49));
+	      assertEquals(7,r.raiz(50));
+	      assertEquals(8,r.raiz(65));
 }
 	      
    
